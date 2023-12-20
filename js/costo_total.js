@@ -1,4 +1,4 @@
-//Lista productos y valores
+/* //Lista productos y valores
 var productos = [
     ['whiskey', 41000],
     ['cerveza', 3600],
@@ -109,4 +109,4 @@ function CostoTotal(nombre_producto, valor_producto, cantidad_a_llevar) {
           valor_total)
 }
 
-CostoTotal(nombre_producto, valor_producto, cantidad_total)
+CostoTotal(nombre_producto, valor_producto, cantidad_total) */
