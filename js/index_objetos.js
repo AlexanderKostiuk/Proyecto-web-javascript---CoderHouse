@@ -12,7 +12,7 @@ class Producto {
 const PROD1 = new Producto("Jack daniels", "./assets/whiskies/jack_daniels.jpg", "whiskies", "jack-daniels", 10000)
 const PROD2 = new Producto("Old parr 12 años", "./assets/whiskies/old_parr_12_años.jpg", "whiskies", "old-parr", 18500)
 const PROD3 = new Producto("Old parr 12 años", "./assets/whiskies/old_parr_12_años.jpg", "whiskies", "old-parr", 18500)
-const PROD4 = new Producto("Johnnie walker 18 años 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_18_años.jpg", "whiskies", "johnnie-walker", 30000)
+const PROD4 = new Producto("Johnnie walker 18 años 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_red_label.jpg", "whiskies", "johnnie-walker", 30000)
 const PROD5 = new Producto("Johnnie Walker Red Label 1L", "/assets/whiskies/johnnie_walker/johnnie_walker_red_label.jpg", "whiskies", "johnnie-walker", 15000)
 const PROD6 = new Producto("Johnnie Walker Double Black 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_double_black.jpg", "whiskies", "johnnie-walker", 40000)
 const PROD7 = new Producto("Johnnie walker black label 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_black_label.jpg", "whiskies", "johnnie-walker", 15000)
@@ -29,10 +29,10 @@ function carga_productos() {
         div.innerHTML = `
         <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
         <div class="producto-info">
-            <h3 class="producto-titulo">${producto.titulo.toUpperCase()}</h3>
-            <p class="producto-precio">$${producto.precio}</p>
-            <button class="producto-agregar id="${producto.marca}">Agregar al carrito <i class="bi bi-basket2"></i></button>
-            `;
+        <h3 class="producto-titulo">${producto.titulo.toUpperCase()}</h3>
+        <p class="producto-precio">$${producto.precio}</p>
+        <button class="producto-agregar id="${producto.marca}">Agregar al carrito <i class="bi bi-basket2"></i></button>
+        `;
         contenedor_productos.append(div);
     })
 }
