@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <div class="logo">
-            <a href="./index.html"><img src="./assets/PosiblesLogos/logoBG.png" alt="Dulce Nectar logo"></a>
+            <a href="./index.html"><img src="./assets/logoBG.png" alt="Dulce Nectar logo"></a>
         </div>
         <div class="search">
             <input type="text" placeholder="Buscar productos, marcas y ofertas...">
@@ -21,7 +21,7 @@
         <nav>
             <ul class="botones">
                 <li>
-                    <button class="boton-menu boton-categoria active">OFERTAS</button>
+                    <button class="boton-menu boton-categoria active">TODOS LOS PRODUCTOS</button>
                 </li>
                 <li>
                     <button class="boton-menu boton-categoria">VINOS</button>
@@ -48,23 +48,8 @@
         </nav>
         <main>
             <h2 class="titulo-principal">Todos los productos</h2>
-            <div class="contenedor-productos">
-                <div class="producto">
-                    <img class="producto-imagen" src="./assets/whiskies/jack_daniels.jpg" alt="">
-                    <div class="producto-info">
-                        <h3 class="producto-titulo">jack daniels</h3>
-                        <p class="producto-precio">$10.000</p>
-                        <button class="producto-agregar">Agregar al carrito <i class="bi bi-basket2"></i></button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="./assets/whiskies/jack_daniels.jpg" alt="">
-                    <div class="producto-info">
-                        <h3 class="producto-titulo">jack daniels</h3>
-                        <p class="producto-precio">$10.000</p>
-                        <button class="producto-agregar">Agregar al carrito <i class="bi bi-basket2"></i></button>
-                    </div>
-                </div>
+            <div id="contenedor-productos" class="contenedor-productos">
+                <!-- Aca se rellena con index.js-->
             </div>
         </main>
     </div>
@@ -89,7 +74,8 @@
             </ul>
         </div>
     </footer>
-<!--     <script src="./js/index.js"></script> -->
+<!--     <script src="./js/index.js"></script>-->
+    <script src="./js/index._objetos.js"></script>
 </body>
 
 </html>
