@@ -125,15 +125,6 @@ const productos = [
         precio: "1000"
     },
     {
-        titulo: "imperial apa lata 473 ml ",
-        imagen: "./assets/cervezas/imperial_apa_lata_473ml.jpg",
-        categoria: {
-            nombre: "cervezas",
-            marca: "imperial",
-        },
-        precio: "1000"
-    },
-    {
         titulo: "imperial golden lata 473 ml ",
         imagen: "./assets/cervezas/imperial_golden_lata_473ml.jpg",
         categoria: {
