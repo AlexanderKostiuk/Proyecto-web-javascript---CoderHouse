@@ -11,11 +11,11 @@ class Producto {
 // VINOS
 const V_PROD1 = new Producto("Alma mora blend blanco 750 ml", "./assets/vinos/alma_mora_blend_blanco_750ml.jpg", "vinos", "alma-mora", 6000)
 const V_PROD2 = new Producto("Alma mora malbec 750 ml", "./assets/vinos/alma_mora_malbec_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD3 = new Producto("Colon cabernet sauvignon 750 ml", "./assets/vinos/colon_cabernet_sauvignon_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD4 = new Producto("Colon dulce fresco 750ml", "./assets/vinos/colon_dulce_fresco_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD5 = new Producto("Colon malbec 750ml", "./assets/vinos/colon_malbec_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD6 = new Producto("Colon rose 750ml", "./assets/vinos/colon_rose_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD7 = new Producto("Colon torrontes 750ml", "./assets/vinos/colon_torrontes_750ml.jpg", "vinos", "alma-mora", 6000)
+const V_PROD3 = new Producto("Colon cabernet sauvignon 750 ml", "./assets/vinos/colon_cabernet_sauvignon_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD4 = new Producto("Colon dulce fresco 750ml", "./assets/vinos/colon_dulce_fresco_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD5 = new Producto("Colon malbec 750ml", "./assets/vinos/colon_malbec_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD6 = new Producto("Colon rose 750ml", "./assets/vinos/colon_rose_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD7 = new Producto("Colon torrontes 750ml", "./assets/vinos/colon_torrontes_750ml.jpg", "vinos", "colon", 6000)
 // whiskies
 const W_PROD1 = new Producto("Jack daniels", "./assets/whiskies/jack_daniels.jpg", "whiskies", "jack-daniels", 10000)
 const W_PROD2 = new Producto("Old parr 12 años", "./assets/whiskies/old_parr_12_años.jpg", "whiskies", "old-parr", 18500)
@@ -28,7 +28,7 @@ const W_PROD7 = new Producto("Johnnie walker swing 750 ml", "./assets/whiskies/j
 const C_PROD1 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/amstel_lager_lata_473ml.jpg", "cervezas", "amstel", 1000)
 const C_PROD2 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/amstel_lager_lata_710ml.jpg", "cervezas", "amstel", 1000)
 const C_PROD3 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/blue_moon_belgian_white_lata_473ml.jpg", "cervezas", "amstel", 1000)
-const C_PROD4 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_473ml.jpg", "amstel", 1000)
+const C_PROD4 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_473ml.jpg","cervezas", "amstel", 1000)
 const C_PROD5 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_710ml.jpg", "cervezas", "amstel", 1000)
 const C_PROD6 = new Producto("Iguana pilsen", "./assets/cervezas/iguana_pilsen_473ml.jpg", "cervezas", "iguana", 1000)
 const C_PROD7 = new Producto("imperial golden lata 473 ml", "./assets/cervezas/imperial_golden_lata_473ml.jpg", "cervezas", "imperial", 1000)
@@ -49,12 +49,15 @@ const ArrayProductos = [V_PROD1, V_PROD2, V_PROD3, V_PROD4, V_PROD5, V_PROD6, V_
 
 const contenedor_productos = document.querySelector("#contenedor-productos");
 const botones_categorias = document.querySelectorAll(".boton-categoria");
-const titulo_categoria = document.querySelector(".titulo-principal")
+const titulo_categoria = document.querySelector(".titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numero = document.querySelector("#numero")
 
 function carga_productos(productos_elegidos) {
     contenedor_productos.innerHTML = "";
 
     productos_elegidos.forEach(producto => {
+
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
@@ -62,10 +65,14 @@ function carga_productos(productos_elegidos) {
         <div class="producto-info">
         <h4 class="producto-titulo">${producto.titulo.toUpperCase()}</h4>
         <p class="producto-precio">$${producto.precio}</p>
-        <button class="producto-agregar id="${producto.marca}">Agregar al carrito <i class="bi bi-basket2"></i></button>
+        <button class="producto-agregar" id="${producto.titulo.toLowerCase()}">Agregar al carrito <i class="bi bi-basket2"></i></button>
         `;
+
         contenedor_productos.append(div);
     })
+
+    actualizarBotonesAgregar();
+    console.log(botonesAgregar);
 }
 
 carga_productos(ArrayProductos)
@@ -88,6 +95,50 @@ botones_categorias.forEach(boton => {
         else {
             carga_productos(ArrayProductos)
         }
-
     })
-})
+});
+
+function actualizarBotonesAgregar() {
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);  
+    }) 
+}
+
+/* aca traigo lo que hay en el local storage para que cuando se
+ponga otro producto en carrito, quede guardado el anterior producto agregado anteriormente  */ 
+
+let productosEnCarrito;
+
+const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+if (productosEnCarritoLS) {
+    productosEnCarrito = productosEnCarritoLS;
+    actualizarNumero()
+} else {
+    productosEnCarrito = []
+}
+
+
+function agregarAlCarrito(evento){
+
+    const idBoton = evento.currentTarget.id;
+    console.log(idBoton)
+    
+    const productoAgregado = ArrayProductos.find(producto => producto.titulo.toLowerCase() === idBoton);
+
+    if (productosEnCarrito.some(producto => producto.titulo.toLowerCase() === idBoton)) {
+        const index = productosEnCarrito.findIndex(producto => producto.titulo.toLowerCase() === idBoton);
+        productosEnCarrito[index].cantidad++;
+    } else {
+        productoAgregado.cantidad = 1
+        productosEnCarrito.push(productoAgregado);
+    }
+    actualizarNumero();
+    console.log(productosEnCarrito)
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+function actualizarNumero () {
+    let nuevoNumero = productosEnCarrito.reduce((acumulador, producto) => acumulador + producto.cantidad, 0);
+    numero.innerText = nuevoNumero
+}
