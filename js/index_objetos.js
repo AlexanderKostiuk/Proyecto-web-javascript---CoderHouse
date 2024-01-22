@@ -1,5 +1,6 @@
 class Producto {
-    constructor(titulo, imagen, categoria, marca, precio) {
+    constructor(ID_producto, titulo, imagen, categoria, marca, precio) {
+        this.ID_producto = ID_producto
         this.titulo = titulo;
         this.imagen = imagen;
         this.categoria = categoria;
@@ -9,34 +10,34 @@ class Producto {
 }
 
 // VINOS
-const V_PROD1 = new Producto("Alma mora blend blanco 750 ml", "./assets/vinos/alma_mora_blend_blanco_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD2 = new Producto("Alma mora malbec 750 ml", "./assets/vinos/alma_mora_malbec_750ml.jpg", "vinos", "alma-mora", 6000)
-const V_PROD3 = new Producto("Colon cabernet sauvignon 750 ml", "./assets/vinos/colon_cabernet_sauvignon_750ml.jpg", "vinos", "colon", 6000)
-const V_PROD4 = new Producto("Colon dulce fresco 750ml", "./assets/vinos/colon_dulce_fresco_750ml.jpg", "vinos", "colon", 6000)
-const V_PROD5 = new Producto("Colon malbec 750ml", "./assets/vinos/colon_malbec_750ml.jpg", "vinos", "colon", 6000)
-const V_PROD6 = new Producto("Colon rose 750ml", "./assets/vinos/colon_rose_750ml.jpg", "vinos", "colon", 6000)
-const V_PROD7 = new Producto("Colon torrontes 750ml", "./assets/vinos/colon_torrontes_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD1 = new Producto(1, "Alma mora blend blanco 750 ml", "./assets/vinos/alma_mora_blend_blanco_750ml.jpg", "vinos", "alma-mora", 6000)
+const V_PROD2 = new Producto(2, "Alma mora malbec 750 ml", "./assets/vinos/alma_mora_malbec_750ml.jpg", "vinos", "alma-mora", 6000)
+const V_PROD3 = new Producto(3, "Colon cabernet sauvignon 750 ml", "./assets/vinos/colon_cabernet_sauvignon_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD4 = new Producto(4, "Colon dulce fresco 750ml", "./assets/vinos/colon_dulce_fresco_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD5 = new Producto(5, "Colon malbec 750ml", "./assets/vinos/colon_malbec_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD6 = new Producto(6, "Colon rose 750ml", "./assets/vinos/colon_rose_750ml.jpg", "vinos", "colon", 6000)
+const V_PROD7 = new Producto(7, "Colon torrontes 750ml", "./assets/vinos/colon_torrontes_750ml.jpg", "vinos", "colon", 6000)
 // whiskies
-const W_PROD1 = new Producto("Jack daniels", "./assets/whiskies/jack_daniels.jpg", "whiskies", "jack-daniels", 10000)
-const W_PROD2 = new Producto("Old parr 12 años", "./assets/whiskies/old_parr_12_años.jpg", "whiskies", "old-parr", 18500)
-const W_PROD3 = new Producto("Johnnie walker 18 años 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_18_años.jpg", "whiskies", "johnnie-walker", 30000)
-const W_PROD4 = new Producto("Johnnie Walker Red Label 1L", "./assets/whiskies/johnnie_walker/johnnie_walker_red_label.jpg", "whiskies", "johnnie-walker", 15000)
-const W_PROD5 = new Producto("Johnnie Walker Double Black 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_double_black.jpg", "whiskies", "johnnie-walker", 40000)
-const W_PROD6 = new Producto("Johnnie walker black label 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_black_label.jpg", "whiskies", "johnnie-walker", 15000)
-const W_PROD7 = new Producto("Johnnie walker swing 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_swing.jpg", "whiskies", "johnnie-walker", 20000)
+const W_PROD1 = new Producto(8, "Jack daniels", "./assets/whiskies/jack_daniels.jpg", "whiskies", "jack-daniels", 10000)
+const W_PROD2 = new Producto(9, "Old parr 12 años", "./assets/whiskies/old_parr_12_años.jpg", "whiskies", "old-parr", 18500)
+const W_PROD3 = new Producto(10, "Johnnie walker 18 años 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_18_años.jpg", "whiskies", "johnnie-walker", 30000)
+const W_PROD4 = new Producto(11, "Johnnie Walker Red Label 1L", "./assets/whiskies/johnnie_walker/johnnie_walker_red_label.jpg", "whiskies", "johnnie-walker", 15000)
+const W_PROD5 = new Producto(12, "Johnnie Walker Double Black 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_double_black.jpg", "whiskies", "johnnie-walker", 40000)
+const W_PROD6 = new Producto(13, "Johnnie walker black label 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_black_label.jpg", "whiskies", "johnnie-walker", 15000)
+const W_PROD7 = new Producto(14, "Johnnie walker swing 750 ml", "./assets/whiskies/johnnie_walker/johnnie_walker_swing.jpg", "whiskies", "johnnie-walker", 20000)
 //cervezas
-const C_PROD1 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/amstel_lager_lata_473ml.jpg", "cervezas", "amstel", 1000)
-const C_PROD2 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/amstel_lager_lata_710ml.jpg", "cervezas", "amstel", 1000)
-const C_PROD3 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/blue_moon_belgian_white_lata_473ml.jpg", "cervezas", "amstel", 1000)
-const C_PROD4 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_473ml.jpg","cervezas", "amstel", 1000)
-const C_PROD5 = new Producto("Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_710ml.jpg", "cervezas", "amstel", 1000)
-const C_PROD6 = new Producto("Iguana pilsen", "./assets/cervezas/iguana_pilsen_473ml.jpg", "cervezas", "iguana", 1000)
-const C_PROD7 = new Producto("imperial golden lata 473 ml", "./assets/cervezas/imperial_golden_lata_473ml.jpg", "cervezas", "imperial", 1000)
-const C_PROD8 = new Producto("imperial golden lata 710 ml", "./assets/cervezas/imperial_golden_lata_710ml.jpg", "cervezas", "imperial", 1000)
-const C_PROD9 = new Producto("imperial ipa lata 473 ml", "./assets/cervezas/imperial_ipa_lata_473ml.jpg", "cervezas", "imperial", 1000)
-const C_PROD10 = new Producto("imperial lager lata 473 ml", "./assets/cervezas/imperial_lager_lata_473ml.jpg", "cervezas", "imperial", 1000)
-const C_PROD11 = new Producto("imperial lager lata 710 ml", "./assets/cervezas/imperial_lager_lata_710ml.jpg", "cervezas", "imperial", 1000)
-const C_PROD12 = new Producto("imperial roja lata 473 ml", "./assets/cervezas/imperial_roja_lata_473ml.jpg", "cervezas", "imperial", 1000)
+const C_PROD1 = new Producto(15,"Amstel Lager lata 473 ml", "./assets/cervezas/amstel_lager_lata_473ml.jpg", "cervezas", "amstel", 1000)
+const C_PROD2 = new Producto(16,"Amstel Lager lata 473 ml", "./assets/cervezas/amstel_lager_lata_710ml.jpg", "cervezas", "amstel", 1000)
+const C_PROD3 = new Producto(17,"Amstel Lager lata 473 ml", "./assets/cervezas/blue_moon_belgian_white_lata_473ml.jpg", "cervezas", "amstel", 1000)
+const C_PROD4 = new Producto(18,"Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_473ml.jpg","cervezas", "amstel", 1000)
+const C_PROD5 = new Producto(18,"Amstel Lager lata 473 ml", "./assets/cervezas/heineken_lata_710ml.jpg", "cervezas", "amstel", 1000)
+const C_PROD6 = new Producto(19,"Iguana pilsen", "./assets/cervezas/iguana_pilsen_473ml.jpg", "cervezas", "iguana", 1000)
+const C_PROD7 = new Producto(20,"imperial golden lata 473 ml", "./assets/cervezas/imperial_golden_lata_473ml.jpg", "cervezas", "imperial", 1000)
+const C_PROD8 = new Producto(21,"imperial golden lata 710 ml", "./assets/cervezas/imperial_golden_lata_710ml.jpg", "cervezas", "imperial", 1000)
+const C_PROD9 = new Producto(22,"imperial ipa lata 473 ml", "./assets/cervezas/imperial_ipa_lata_473ml.jpg", "cervezas", "imperial", 1000)
+const C_PROD10 = new Producto(23,"imperial lager lata 473 ml", "./assets/cervezas/imperial_lager_lata_473ml.jpg", "cervezas", "imperial", 1000)
+const C_PROD11 = new Producto(24,"imperial lager lata 710 ml", "./assets/cervezas/imperial_lager_lata_710ml.jpg", "cervezas", "imperial", 1000)
+const C_PROD12 = new Producto(25,"imperial roja lata 473 ml", "./assets/cervezas/imperial_roja_lata_473ml.jpg", "cervezas", "imperial", 1000)
 //spirits
 
 
@@ -72,7 +73,7 @@ function carga_productos(productos_elegidos) {
     })
 
     actualizarBotonesAgregar();
-    console.log(botonesAgregar);
+/*     console.log(botonesAgregar); */
 }
 
 carga_productos(ArrayProductos)
@@ -110,9 +111,10 @@ ponga otro producto en carrito, quede guardado el anterior producto agregado ant
 
 let productosEnCarrito;
 
-const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
 if (productosEnCarritoLS) {
-    productosEnCarrito = productosEnCarritoLS;
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarNumero()
 } else {
     productosEnCarrito = []
@@ -120,7 +122,6 @@ if (productosEnCarritoLS) {
 
 
 function agregarAlCarrito(evento){
-
     const idBoton = evento.currentTarget.id;
     console.log(idBoton)
     

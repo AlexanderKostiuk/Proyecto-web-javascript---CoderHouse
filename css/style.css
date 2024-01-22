@@ -131,8 +131,6 @@ body {
     color: var(--color-main);
 }
 
-
-
 .numero {
     background-color: var(--color-blanco);
     color: var(--color-main);
@@ -277,7 +275,7 @@ main {
     justify-content: space-between;
 }
 
-.carrito-acciones-vaciar button {
+.carrito-acciones-izq button {
     border: 0;
     padding: 1rem;
     background-color: var(--color-main);
@@ -317,7 +315,7 @@ main {
     transition: .3s;
 }
 
-.carrito-acciones-vaciar button:hover,
+.carrito-acciones-izq button:hover,
 .carrito-acciones-comprar:hover{
     background-color: var(--color-blanco);
     color: var(--color-main);
@@ -329,7 +327,6 @@ main {
  .disabled {
     display: none;
 }
-
 
 
 /*---------------FOOTER---------------------*/

@@ -1,4 +1,5 @@
-const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarrito = localStorage.getItem("productos-en-carrito");
+productosEnCarrito = JSON.parse(productosEnCarrito)
 console.log(productosEnCarrito)
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
@@ -6,9 +7,13 @@ const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar"); 
+const botonVaciarCarrito = document.querySelector("#carrito-acciones-vaciar");
+const botonComprarCarrito = document.querySelector("#carrito-acciones-comprar");
+const precioTotal = document.querySelector("#precio-total");
 
 function cargarProductosEnCarrito() {
-    if (productosEnCarrito) {
+    if (productosEnCarrito && productosEnCarrito.length > 0) {
+
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
@@ -37,21 +42,22 @@ function cargarProductosEnCarrito() {
                         <small>Subtotal</small>
                         <p>$${producto.precio * producto.cantidad}</p>
                     </div>
-                    <button id="${producto.id}" class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
+                    <button class="carrito-producto-eliminar" id="${producto.ID_producto}"><i class="bi bi-trash-fill"></i></button>
                 </div>
                     </div>
             `
             contenedorCarritoProductos.append(div)
         });
     
-    } 
-    else {
+    } else {
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
         contenedorCarritoComprado.classList.add("disabled");
-    }
+    };
+    
     actualizarBotonesEliminar();
+    actualizarPrecioTotal();
 }
 
 cargarProductosEnCarrito();
@@ -63,7 +69,36 @@ function actualizarBotonesEliminar() {
     });
 }
 
-function eliminarDelCarrito(e) {
-    const idBoton = e.currentTarget.id;
-    console.log(idBoton);
+function eliminarDelCarrito(evento) {
+    const idBoton = evento.currentTarget.ID_producto;   
+    /* console.log(productoEliminado); */
+    const index = productosEnCarrito.findIndex(producto => producto.ID_producto === idBoton);
+    
+    productosEnCarrito.splice(index, 1);
+    cargarProductosEnCarrito()
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 };
+
+botonVaciarCarrito.addEventListener("click", vaciarCarrito);
+
+function vaciarCarrito() {
+    productosEnCarrito.length = 0;
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    cargarProductosEnCarrito()
+}
+
+function actualizarPrecioTotal() {
+    const totalCalculado = productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.precio * producto.cantidad), 0);
+    precioTotal.innerHTML = `$${totalCalculado}`
+}
+
+botonComprarCarrito.addEventListener("click", comprarCarrito);
+function comprarCarrito() {
+    productosEnCarrito.length = 0;
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    contenedorCarritoVacio.classList.add("disabled");
+    contenedorCarritoProductos.classList.add("disabled");
+    contenedorCarritoAcciones.classList.add("disabled");
+    contenedorCarritoComprado.classList.remove("disabled");
+}
