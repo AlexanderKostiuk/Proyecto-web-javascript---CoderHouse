@@ -52,7 +52,7 @@ const contenedor_productos = document.querySelector("#contenedor-productos");
 const botones_categorias = document.querySelectorAll(".boton-categoria");
 const titulo_categoria = document.querySelector(".titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
-const numero = document.querySelector("#numero")
+const numero = document.querySelector("#numero");
 
 function carga_productos(productos_elegidos) {
     contenedor_productos.innerHTML = "";
@@ -123,7 +123,7 @@ if (productosEnCarritoLS) {
 
 function agregarAlCarrito(evento){
     const idBoton = evento.currentTarget.id;
-    console.log(idBoton)
+/*     console.log(idBoton) */
     
     const productoAgregado = ArrayProductos.find(producto => producto.titulo.toLowerCase() === idBoton);
 
@@ -135,8 +135,26 @@ function agregarAlCarrito(evento){
         productosEnCarrito.push(productoAgregado);
     }
     actualizarNumero();
-    console.log(productosEnCarrito)
+/*     console.log(productosEnCarrito) */
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    Toastify({
+        text: "Producto agregado al carrito",
+        duration: 3000,
+        offset: {
+            y: 50
+        },
+        destination: "./carrito.html",
+/*         newWindow: true, */
+        close: true,
+        duration: 1500,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to left, rgb(50, 50, 100), rgb(0, 0, 0)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
 }
 
 function actualizarNumero () {
