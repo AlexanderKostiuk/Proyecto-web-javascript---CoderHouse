@@ -318,6 +318,15 @@ main {
     background-color: red;
 }
 
+.carrito-comprado {
+    background-color: var(--color-blanco);
+    background-color: var(--color-blanco);
+    color: var(--color-main);
+    border-radius: 1rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
 /*---------------FOOTER---------------------*/
 .footer-wrapper {
     width: 100%;
@@ -336,15 +345,25 @@ main {
     color: var(--color-blanco);
 }
 
-.footer-lista-categorias li  {
-    color: var(--color-blanco);
-    transition: .2s;
-}
-.footer-lista-categorias li:hover {
-    color: grey;
-    cursor:default;
+.footer-redes-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
+.footer-redes-logo a  {
+    color: var(--color-blanco);
+    transition: .2s;
+    font-size: 2rem;
+}
+.footer-redes-logo a:hover {
+    color: grey;
+    cursor:pointer;
+}
+
+.footer-redes-logo a {
+    color: var(--color-blanco);
+}
 
 /* ALERTA */
 
