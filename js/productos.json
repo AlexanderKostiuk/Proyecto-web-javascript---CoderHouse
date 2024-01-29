@@ -1,0 +1,274 @@
+[
+    {
+      "numero producto" : "01",
+      "titulo"          : "Alma mora blend blanco 750 ml",
+      "imagen"          : "./assets/vinos/alma_mora_blend_blanco_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "alma-mora",
+      "precio"          : 2835
+    },
+    {
+      "numero producto" : "02",
+      "titulo"          : "Alma mora malbec 750 ml",
+      "imagen"          : "./assets/vinos/alma_mora_malbec_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "alma-mora",
+      "precio"          : 2835
+    },
+    {
+      "numero producto" : "03",
+      "titulo"          : "Colon cabernet sauvignon 750 ml",
+      "imagen"          : "./assets/vinos/colon_cabernet_sauvignon_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "colon",
+      "precio"          : 2835
+    },
+    {
+      "numero producto" : "04",
+      "titulo"          : "Colon dulce fresco 750ml",
+      "imagen"          : "./assets/vinos/colon_dulce_fresco_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "colon",
+      "precio"          : 3450
+    },
+    {
+      "numero producto" : "05",
+      "titulo"          : "Colon malbec 750ml",
+      "imagen"          : "./assets/vinos/colon_malbec_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "colon",
+      "precio"          : 3450
+    },
+    {
+      "numero producto" : "06",
+      "titulo"          : "Colon rose 750ml",
+      "imagen"          : "./assets/vinos/colon_rose_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "colon",
+      "precio"          : 3450
+    },
+    {
+      "numero producto" : "07",
+      "titulo"          : "Colon torrontes 750ml",
+      "imagen"          : "./assets/vinos/colon_torrontes_750ml.jpg",
+      "categoria"       : "vinos",
+      "marca"           : "colon",
+      "precio"          : 3400
+    },
+    {
+      "numero producto" : "08",
+      "titulo"          : "Jack daniels",
+      "imagen"          : "./assets/whiskies/jack_daniels.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "jack-daniels",
+      "precio"          : 34000
+    },
+    {
+      "numero producto" : "09",
+      "titulo"          : "Old parr 12 a\u00f1os",
+      "imagen"          : "./assets/whiskies/old_parr_12_a\u00f1os.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "old-parr",
+      "precio"          : 22900
+    },
+    {
+      "numero producto" : "010",
+      "titulo"          : "Johnnie walker 18 a\u00f1os 750 ml",
+      "imagen"          : "./assets/whiskies/johnnie_walker/johnnie_walker_18_a\u00f1os.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "johnnie-walker",
+      "precio"          : 155000
+    },
+    {
+      "numero producto" : "011",
+      "titulo"          : "Johnnie Walker Red Label 1L",
+      "imagen"          : "./assets/whiskies/johnnie_walker/johnnie_walker_red_label.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "johnnie-walker",
+      "precio"          : 19670
+    },
+    {
+      "numero producto" : "012",
+      "titulo"          : "Johnnie Walker Double Black 750 ml",
+      "imagen"          : "./assets/whiskies/johnnie_walker/johnnie_walker_double_black.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "johnnie-walker",
+      "precio"          : 32600
+    },
+    {
+      "numero producto" : "013",
+      "titulo"          : "Johnnie walker black label 750 ml",
+      "imagen"          : "./assets/whiskies/johnnie_walker/johnnie_walker_black_label.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "johnnie-walker",
+      "precio"          : 28400
+    },
+    {
+      "numero producto" : "014",
+      "titulo"          : "Johnnie walker swing 750 ml",
+      "imagen"          : "./assets/whiskies/johnnie_walker/johnnie_walker_swing.jpg",
+      "categoria"       : "whiskies",
+      "marca"           : "johnnie-walker",
+      "precio"          : 62000
+    },
+    {
+      "numero producto" : "015",
+      "titulo"          : "Amstel Lager lata 473 ml",
+      "imagen"          : "./assets/cervezas/amstel_lager_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "amstel",
+      "precio"          : 920
+    },
+    {
+      "numero producto" : "016",
+      "titulo"          : "Amstel Lager lata 710 ml",
+      "imagen"          : "./assets/cervezas/amstel_lager_lata_710ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "amstel",
+      "precio"          : 1400
+    },
+    {
+      "numero producto" : "017",
+      "titulo"          : "Blue moon lata 473 ml",
+      "imagen"          : "./assets/cervezas/blue_moon_belgian_white_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "blue moon",
+      "precio"          : 1230
+    },
+    {
+      "numero producto" : "018",
+      "titulo"          : "Heineken lata 473 ml",
+      "imagen"          : "./assets/cervezas/heineken_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "heineken",
+      "precio"          : 1320
+    },
+    {
+      "numero producto" : "019",
+      "titulo"          : "Heineken lata 710 ml",
+      "imagen"          : "./assets/cervezas/heineken_lata_710ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "heineken",
+      "precio"          : 1930
+    },
+    {
+      "numero producto" : "020",
+      "titulo"          : "Iguana pilsen",
+      "imagen"          : "./assets/cervezas/iguana_pilsen_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "iguana",
+      "precio"          : 1000
+    },
+    {
+      "numero producto" : "021",
+      "titulo"          : "imperial golden lata 473 ml",
+      "imagen"          : "./assets/cervezas/imperial_golden_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "imperial",
+      "precio"          : 1040
+    },
+    {
+      "numero producto" : "022",
+      "titulo"          : "imperial golden lata 710 ml",
+      "imagen"          : "./assets/cervezas/imperial_golden_lata_710ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "imperial",
+      "precio"          : 1500
+    },
+    {
+      "numero producto" : "023",
+      "titulo"          : "imperial ipa lata 473 ml",
+      "imagen"          : "./assets/cervezas/imperial_ipa_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "imperial",
+      "precio"          : 1000
+    },
+    {
+      "numero producto" : "024",
+      "titulo"          : "imperial lager lata 473 ml",
+      "imagen"          : "./assets/cervezas/imperial_lager_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "imperial",
+      "precio"          : 1000
+    },
+    {
+      "numero producto" : "025",
+      "titulo"          : "imperial lager lata 710 ml",
+      "imagen"          : "./assets/cervezas/imperial_lager_lata_710ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "imperial",
+      "precio"          : 1000
+    },
+    {
+      "numero producto" : "026",
+      "titulo"          : "imperial roja lata 473 ml",
+      "imagen"          : "./assets/cervezas/imperial_roja_lata_473ml.jpg",
+      "categoria"       : "cervezas",
+      "marca"           : "imperial",
+      "precio"          : 1000
+    },
+    {
+      "numero producto" : "027",
+      "titulo"          : "cinzano rosso 1l",
+      "imagen"          : "./assets/aperitivos/cinzano_rosso_1l.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "cinzano",
+      "precio"          : 3500
+    },
+    {
+      "numero producto" : "028",
+      "titulo"          : "cinzano rosso 450 ml",
+      "imagen"          : "./assets/aperitivos/cinzano_rosso_450ml.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "cinzano",
+      "precio"          : 1670
+    },
+    {
+      "numero producto" : "029",
+      "titulo"          : "fernet branca 1 lt",
+      "imagen"          : "./assets/aperitivos/fernet_branca_1lt.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "fernet",
+      "precio"          : 9000
+    },
+    {
+      "numero producto" : "030",
+      "titulo"          : "fernet branca 750 ml",
+      "imagen"          : "./assets/aperitivos/fernet_branca_750ml.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "fernet",
+      "precio"          : 12000
+    },
+    {
+      "numero producto" : "031",
+      "titulo"          : "fernet buhero negro 700 ml",
+      "imagen"          : "./assets/aperitivos/fernet_buhero_negro_700ml.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "fernet",
+      "precio"          : 7000
+    },
+    {
+      "numero producto" : "032",
+      "titulo"          : "hesperidina",
+      "imagen"          : "./assets/aperitivos/hesperidina_1lt.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "hesperidina",
+      "precio"          : 7500
+    },
+    {
+      "numero producto" : "033",
+      "titulo"          : "martini bianco 1lt",
+      "imagen"          : "./assets/aperitivos/martini_bianco_1lt.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "martini",
+      "precio"          : 3700
+    },
+    {
+      "numero producto" : "034",
+      "titulo"          : "martini extra dry 950 ml",
+      "imagen"          : "./assets/aperitivos/martini_extra_dry_950ml.jpg",
+      "categoria"       : "aperitivos",
+      "marca"           : "martini",
+      "precio"          : 5300
+    }
+]

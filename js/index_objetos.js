@@ -9,7 +9,6 @@ class Producto {
     }
 }
 
-
 // VINOS
 const V_PROD1 = new Producto("01", "Alma mora blend blanco 750 ml", "./assets/vinos/alma_mora_blend_blanco_750ml.jpg", "vinos", "alma-mora", 2835)
 const V_PROD2 = new Producto("02", "Alma mora malbec 750 ml", "./assets/vinos/alma_mora_malbec_750ml.jpg", "vinos", "alma-mora", 2835)
@@ -169,9 +168,18 @@ function agregarAlCarrito(evento){
 }
 
 function actualizarNumero () {
-    console.log("productos en carrito LOCAL STORAGE\n", productosEnCarrito)
+/*     console.log("productos en carrito LOCAL STORAGE\n", productosEnCarrito) */
 /*     console.log("PRoductos en carrito \n", productosEnCarrito) */
     
     let nuevoNumero = productosEnCarrito.reduce((acumulador, producto) => acumulador + producto.cantidad, 0);
     numero.innerText = nuevoNumero
 }
+
+/* function cargarJSON() {
+    fetch('productos.json')
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
+
+cargarJSON()
+ */
