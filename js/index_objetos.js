@@ -169,8 +169,8 @@ function agregarAlCarrito(evento){
 }
 
 function actualizarNumero () {
-/*     console.log("productos en carrito LOCAL STORAGE\n", productosEnCarrito)
-    console.log("PRoductos en carrito \n", productosEnCarrito) */
+    console.log("productos en carrito LOCAL STORAGE\n", productosEnCarrito)
+/*     console.log("PRoductos en carrito \n", productosEnCarrito) */
     
     let nuevoNumero = productosEnCarrito.reduce((acumulador, producto) => acumulador + producto.cantidad, 0);
     numero.innerText = nuevoNumero
