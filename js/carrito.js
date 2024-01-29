@@ -1,6 +1,6 @@
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito)
-/* console.log(productosEnCarrito) */
+console.log(productosEnCarrito)
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
@@ -42,7 +42,7 @@ function cargarProductosEnCarrito() {
                         <small>Subtotal:</small>
                         <p>$${producto.precio * producto.cantidad}</p>
                     </div>
-                    <button class="carrito-producto-eliminar" id="${producto.ID_producto}"><i class="bi bi-trash-fill"></i></button>
+                    <button class="carrito-producto-eliminar" id="${producto.numero_producto}"><i class="bi bi-trash-fill"></i></button>
                 </div>
                     </div>
             `
@@ -70,14 +70,15 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(evento) {
-    const idBoton = evento.currentTarget.ID_producto;   
-    /* console.log(productoEliminado); */
-    const index = productosEnCarrito.findIndex(producto => producto.ID_producto === idBoton);
-    
+    const idBoton = evento.currentTarget.id;
+    /*console.log(idBoton)*/
+    const index = productosEnCarrito.findIndex(producto => producto.numero_producto === idBoton);
+    /* console.log(index) */
     productosEnCarrito.splice(index, 1);
-    cargarProductosEnCarrito()
+    cargarProductosEnCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    
     Toastify({
         text: "Producto eliminado del carrito",
         duration: 3000,

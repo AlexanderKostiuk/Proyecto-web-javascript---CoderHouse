@@ -11,11 +11,4 @@ openMenu.addEventListener("click", () => {
     }else {
         aside.classList.remove("aside-visible");
     } 
-
 })
-
-botones_categorias.forEach(boton => boton.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
-    clickState = 0;
-    
-}))

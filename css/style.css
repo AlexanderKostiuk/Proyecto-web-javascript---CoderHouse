@@ -177,9 +177,12 @@ main {
     padding: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    transition: .2s;
-    
+    transition: .2s;   
 }
+
+/* .producto-id {
+    display: none;
+} */
 
 .producto-agregar:hover {
     background-color: var(--color-gris-clarito);
@@ -271,6 +274,9 @@ main {
     gap: 1rem;
 }
 
+.carrito-acciones-total span {
+    color: red;
+}
 
 .carrito-acciones-comprar  {
     border: 0;
